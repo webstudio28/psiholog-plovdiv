@@ -16,16 +16,21 @@ permalink: /kontakti.html
         <div class="contact-grid">
             <div class="contact-form">
                 <h2>Изпратете съобщение</h2>
-                <form action="https://formsubmit.co/rossymarinova13@abv.bg" method="POST">
-                    <!-- Disable CAPTCHA if you want -->
-                    <input type="hidden" name="_captcha" value="false">
-
-                    <!-- Optional: Redirect to thank-you page -->
-                     <input type="hidden" name="_next" value="https://www.rosi-yovcheva.com/message.html">
-
-                     <input type="hidden" name="Съобщение от контактната форма в сайта" value="">
-
-                    <input type="hidden" name="_autoresponse" value="Вашето съобщение беше изпратено успешно. Ще се свържа с вас възможно най-скоро.">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    
+                    <!-- Optional: Subject -->
+                    <input type="hidden" name="subject" value="Съобщение от контактната форма в сайта">
+                    
+                    <!-- Optional: From Name -->
+                    <input type="hidden" name="from_name" value="Роси Йовчева - Психолог">
+                    
+                    <!-- Optional: Custom Redirection or Thank you Page -->
+                    <input type="hidden" name="redirect" value="https://psiholog-plovdiv.com/message.html">
+                    
+                    <!-- Optional: But Recommended: To Prevent SPAM Submission -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                     <div class="form-group">
                         <label for="name">Име *</label>
@@ -33,7 +38,7 @@ permalink: /kontakti.html
                     </div>
                     <div class="form-group">
                         <label for="email">Имейл *</label>
-                        <input type="email" id="email" name="Имейл" required placeholder="Вашият имейл">
+                        <input type="email" id="email" name="email" required placeholder="Вашият имейл">
                     </div>
                     <div class="form-group">
                         <label for="phone">Телефон</label>
@@ -41,7 +46,7 @@ permalink: /kontakti.html
                     </div>
                     <div class="form-group">
                         <label for="message">Съобщение *</label>
-                        <textarea id="message" name="Съобщение:" required placeholder="Как мога да Ви помогна?"></textarea>
+                        <textarea id="message" name="Съобщение" required placeholder="Как мога да Ви помогна?"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Изпрати</button>
                 </form>

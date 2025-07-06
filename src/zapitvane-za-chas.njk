@@ -10,18 +10,21 @@ permalink: /zapitvane-za-chas.html
         <div class="contact-form booking-form">
             <h4>Моля, оставете вашите данни за контакт, както и предпочитан ден и час за среща. Ще се свържа с вас
                 възможно най-скоро за потвърждение.</h4>
-            <form action="https://formsubmit.co/rossymarinova13@abv.bg" method="POST">
-                <!-- Disable CAPTCHA if you want -->
-                <input type="hidden" name="_captcha" value="false">
-
-                <!-- Optional: Redirect to thank-you page -->
-                <input type="hidden" name="_next" value="https://www.rosi-yovcheva.com/message.html">
-
-
-                <input type="hidden" name="Запитване за час" value="Имате запитване за час">
-
-                <input type="hidden" name="_autoresponse"
-                       value="Вашето съобщение беше изпратено успешно. Ще се свържа с вас възможно най-скоро.">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                
+                <!-- Optional: Subject -->
+                <input type="hidden" name="subject" value="Запитване за час">
+                
+                <!-- Optional: From Name -->
+                <input type="hidden" name="from_name" value="Роси Йовчева - Психолог">
+                
+                <!-- Optional: Custom Redirection or Thank you Page -->
+                <input type="hidden" name="redirect" value="https://psiholog-plovdiv.com/message.html">
+                
+                <!-- Optional: But Recommended: To Prevent SPAM Submission -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <div class="form-group">
                     <label for="name">Име *</label>
