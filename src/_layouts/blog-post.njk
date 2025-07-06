@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title }}</title>
+    <meta name="description" content="{{ blog.excerpt }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ pathPrefix }}assets/css/styles.css">
+
+    <script src="{{ pathPrefix }}assets/js/silktide-consent-manager.js"></script>
+    <script src="{{ pathPrefix }}assets/js/silktide-consent-head.js"></script>
+
+    <icon href="{{ pathPrefix }}favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        {% include "header.njk" %}
+    </header>
+
+    <main>
+        <article class="article-section">
+            <div class="container">
+                <div class="article-content">
+                    <h1>{{ blog.title }}</h1>
+                </div>
+                {% if blog.image %}
+                <img class="article-image" src="{{ pathPrefix }}assets/images/{{ blog.image }}" alt="{{ blog.title }}">
+                {% endif %}
+                <div class="article-content">
+                    {{ blog.content | safe }}
+                </div>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="{{ pathPrefix }}blog.html" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i> Обратно към блога
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        {% include "footer.njk" %}
+    </footer>
+    <script src="{{ pathPrefix }}assets/js/scripts.js"></script>
+</body>
+</html> 

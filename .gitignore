@@ -1,0 +1,44 @@
+# Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Eleventy output
+_site/
+.output/
+.cache/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Env/Secrets
+.env
+.env.local
+.env.*
+
+# Optional: GitHub Pages (only if you deploy from a branch like `gh-pages`)
+dist/
+build/
+
+# Optional: OS specific
+.sass-cache/
+*.sass-cache
+*.tmp
+*.bak
+
+# Netlify / Vercel
+.netlify/
+.vercel/
+
+# macOS metadata
+.AppleDouble
+.LSOverride

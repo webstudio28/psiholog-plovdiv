@@ -1,0 +1,24 @@
+---
+layout: blog-post.njk
+pagination:
+  data: blogs
+  size: 1
+  alias: blog
+permalink: /{{ blog.id }}.html
+title: "{{ blog.title }}"
+metaDescription: "{{ blog.excerpt }}"
+author: "{{ blog.author }}"
+readTime: "{{ blog.readTime }}"
+category: "{{ blog.category }}"
+featuredImage: "{{ blog.image }}"
+eleventyComputed:
+  date: "{{ blog.date }}"
+---
+
+<section class="section-padding">
+    <div class="container">
+        <div class="blog-post-content">
+            {{ blog.content | safe }}
+        </div>
+    </div>
+</section> 

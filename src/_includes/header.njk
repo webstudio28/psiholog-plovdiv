@@ -1,0 +1,28 @@
+<header class="main-header">
+    <div class="container">
+        <a href="index.html" class="logo" style="overflow: hidden">
+            <img src="{{ pathPrefix }}assets/images/logo1.png" style="width: 100px; border-radius: 25px" alt="Роси Йовчева Лого">
+        </a>
+        <div class="header-actions">
+            <nav class="main-nav" id="main-nav">
+                <div class="mobile-menu-header">
+                    <a href="index.html" class="logo"></a>
+                    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Затвори менюто">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="{% if page.url == '/' %}active{% endif %}">Начало</a></li>
+                    <li><a href="za-men.html" class="{% if page.url == '/za-men/' %}active{% endif %}">За мен</a></li>
+                    <li><a href="uslugi.html" class="{% if page.url == '/uslugi/' %}active{% endif %}">Услуги</a></li>
+                    <li><a href="blog.html" class="{% if page.url == '/blog/' %}active{% endif %}">Блог</a></li>
+                    <li><a href="kontakti.html" class="{% if page.url == '/kontakti/' %}active{% endif %}">Контакти</a></li>
+                </ul>
+            </nav>
+            <a href="zapitvane-za-chas.html" class="btn btn-primary header-book-btn">Запитване за час</a>
+            <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Отвори менюто">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</header>

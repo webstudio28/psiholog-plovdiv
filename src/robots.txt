@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /message.html
+Disallow: /zapitvane-za-chas.html
+Disallow: /policy.html
+
+Sitemap: https://www.rosi-yovcheva.com/sitemap.xml

@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Блог - Роси Йовчева
+metaDescription: Разгледайте статиите на Роси Йовчева за психично здраве, емоционално благополучие и личностно развитие.
+permalink: /blog.html
+---
+
+<section class="section-padding blog-section">
+    <div class="container">
+        <h2>Блог / Полезни статии</h2>
+        <p>Разгледайте моите статии за психично здраве, емоционално благополучие и личностно развитие.</p>
+        <div class="blog-grid">
+            {% for blog in blogs %}
+            <div class="blog-card">
+                <img src="{{ pathPrefix }}assets/images/{{ blog.image }}" alt="{{ blog.alt }}">
+                <div class="blog-card-content">
+                    <div class="meta">
+                        <span><i class="far fa-user"></i> {{ blog.author }}</span>
+                        <span><i class="far fa-clock"></i> {{ blog.readTime }}</span>
+                        <span><i class="far fa-calendar"></i> {{ blog.date | date("dd.MM.yyyy") }}</span>
+                    </div>
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.excerpt }}</p>
+                    <a href="{{ blog.id }}.html" class="btn btn-primary">Прочети статията</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

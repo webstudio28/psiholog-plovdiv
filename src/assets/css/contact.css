@@ -1,0 +1,159 @@
+/* Contact Section */
+.contact-section {
+    text-align: left;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: var(--very-light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.contact-details {
+    flex: 1;
+    background-color: var(--very-light-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.contact-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.contact-details i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-map {
+    margin-top: 20px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 450px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form,
+    .contact-details {
+        padding: 20px;
+    }
+
+    .contact-form h2,
+    .contact-details h2 {
+        font-size: 1.4rem;
+    }
+
+    .contact-map iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-form .btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .contact-details li {
+        font-size: 0.8rem;
+    }
+
+    .contact-details i {
+        font-size: 1rem;
+    }
+}
+
+
+.contact-details a {
+    all: unset;
+    text-decoration: underline;
+}
+
+.contact-details a:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.booking-form {
+    margin: 2em auto 0 auto;
+    max-width: 500px;
+}
