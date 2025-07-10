@@ -1,36 +1,46 @@
 <!DOCTYPE html>
 <html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="{{ pathPrefix }}assets/css/styles.css">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HR24WF91VW"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-    <script src="{{ pathPrefix }}assets/js/silktide-consent-manager.js"></script>
-    <script src="{{ pathPrefix }}assets/js/silktide-consent-head.js"></script>
+            gtag('config', 'G-HR24WF91VW');
+        </script>
 
-    <icon href="{{ pathPrefix }}favicon.ico" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="{{ pathPrefix }}assets/css/styles.css">
 
-</head>
-<body>
-    <header>
-        {% include "header.njk" %}
-    </header>
+        <script src="{{ pathPrefix }}assets/js/silktide-consent-manager.js"></script>
+        <script src="{{ pathPrefix }}assets/js/silktide-consent-head.js"></script>
 
-    <main>
-        {{ content | safe }}
-    </main>
+        <icon href="{{ pathPrefix }}favicon.ico" type="image/x-icon"></head>
+        <body>
+            <header>
+                {% include "header.njk" %}
+            </header>
 
-    <footer>
-        {% include "footer.njk" %}
-    </footer>
+            <main>
+                {{ content | safe }}
+            </main>
 
-    {% if page.url == "/za-men.html" %}
-    <script src="{{ pathPrefix }}assets/js/gallery-modal.js"></script>
-    {% endif %}
-</body>
-</html> 
+            <footer>
+                {% include "footer.njk" %}
+            </footer>
+
+            {% if page.url == "/za-men.html" %}
+                <script src="{{ pathPrefix }}assets/js/gallery-modal.js"></script>
+            {% endif %}
+        </body>
+    </html>
