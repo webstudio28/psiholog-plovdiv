@@ -4,7 +4,7 @@ module.exports = function(eleventyConfig) {
     // Copy assets directly to output
     eleventyConfig.addPassthroughCopy("src/assets");
     // eleventyConfig.addPassthroughCopy("assets");
-    eleventyConfig.addPassthroughCopy("favicon.png");
+    eleventyConfig.addPassthroughCopy("src/favicon.png");
     eleventyConfig.addPassthroughCopy("src/robots.txt");
     eleventyConfig.addPassthroughCopy("src/sitemap.xml");
     eleventyConfig.addPassthroughCopy("CNAME");
