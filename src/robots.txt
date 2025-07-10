@@ -4,4 +4,4 @@ Disallow: /message.html
 Disallow: /zapitvane-za-chas.html
 Disallow: /policy.html
 
-Sitemap: https://www.rosi-yovcheva.com/sitemap.xml
+Sitemap: https://www.psiholog-plovdiv.com/sitemap.xml

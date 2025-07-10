@@ -5,8 +5,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     // eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addPassthroughCopy("favicon.png");
-    eleventyConfig.addPassthroughCopy("robots.txt");
-    eleventyConfig.addPassthroughCopy("sitemap.xml");
+    eleventyConfig.addPassthroughCopy("src/robots.txt");
+    eleventyConfig.addPassthroughCopy("src/sitemap.xml");
     eleventyConfig.addPassthroughCopy("CNAME");
 
     // Add limit filter
