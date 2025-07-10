@@ -24,7 +24,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
     ],
     text: {
         banner: {
-            description: "<p>Ние използваме бисквитки на нашия сайт, за да подобрим вашето потребителско изживяване, да предоставим персонализирано съдържание и да анализираме трафика си. <a href=\"https://www.rosi-yovcheva.com/policy.html\" target=\"_blank\">Политика</a></p>",
+            description: "<p>Ние използваме бисквитки на нашия сайт, за да подобрим вашето потребителско изживяване, да предоставим персонализирано съдържание и да анализираме трафика си. <a href=\"https://www.psiholog-plovdiv.com/policy.html\" target=\"_blank\">Политика</a></p>",
             acceptAllButtonText: "Приеми всички",
             acceptAllButtonAccessibleLabel: "Accept all cookies",
             rejectNonEssentialButtonText: "Отхвърли незадължителни.",
