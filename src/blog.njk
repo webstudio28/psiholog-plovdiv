@@ -10,14 +10,12 @@ permalink: /blog.html
         <h2>Блог / Полезни статии</h2>
         <p>Разгледайте моите статии за психично здраве, емоционално благополучие и личностно развитие.</p>
         <div class="blog-grid">
-            {% for blog in blogs %}
+            {% for blog in blogs | reverse %}
             <div class="blog-card">
                 <img src="{{ pathPrefix }}assets/images/{{ blog.image }}" alt="{{ blog.alt }}">
                 <div class="blog-card-content">
                     <div class="meta">
                         <span><i class="far fa-user"></i> {{ blog.author }}</span>
-                        <span><i class="far fa-clock"></i> {{ blog.readTime }}</span>
-                        <span><i class="far fa-calendar"></i> {{ blog.date | date("dd.MM.yyyy") }}</span>
                     </div>
                     <h3>{{ blog.title }}</h3>
                     <p>{{ blog.excerpt }}</p>
