@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ blog.title }}</title>
-    <meta name="description" content="{{ blog.excerpt }}">
+    <title>{{ blog.seoTitle if blog.seoTitle else blog.title }}</title>
+    <meta name="description" content="{{ blog.metaDescription if blog.metaDescription else blog.excerpt }}">
+    <meta property="og:title" content="{{ blog.seoTitle if blog.seoTitle else blog.title }}">
+    <meta property="og:description" content="{{ blog.metaDescription if blog.metaDescription else blog.excerpt }}">
+    <meta property="og:type" content="article">
+    {% if blog.image %}<meta property="og:image" content="{{ pathPrefix }}assets/images/{{ blog.image }}">{% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ blog.seoTitle if blog.seoTitle else blog.title }}">
+    <meta name="twitter:description" content="{{ blog.metaDescription if blog.metaDescription else blog.excerpt }}">
+    {% if blog.image %}<meta name="twitter:image" content="{{ pathPrefix }}assets/images/{{ blog.image }}">{% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
