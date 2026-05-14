@@ -1,5 +1,6 @@
 # Node.js
-node_modules/
+node_modules
+local_docs/
 npm-debug.log*
 
 # Eleventy output
@@ -41,3 +42,4 @@ build/
 # macOS metadata
 .AppleDouble
 .LSOverride
+
