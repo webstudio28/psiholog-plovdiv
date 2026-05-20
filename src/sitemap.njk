@@ -29,7 +29,7 @@ eleventyExcludeFromCollections: true
     <lastmod>2025-05-15</lastmod>
     <priority>0.70</priority>
   </url>
-  {% for blog in blogs %}
+  {% for blog in blogsPublished %}
   <url>
     <loc>https://www.psiholog-plovdiv.com/{{ blog.id }}.html</loc>
     <lastmod>{{ blog.date }}</lastmod>

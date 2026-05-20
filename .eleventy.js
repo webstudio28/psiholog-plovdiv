@@ -20,15 +20,15 @@ module.exports = function(eleventyConfig) {
         return DateTime.fromJSDate(jsDate).toFormat(format);
     });
 
-    // Create blog collection from blogs.json data
+    // Create blog collection from blogs.json data (published only)
     eleventyConfig.addCollection("blogPosts", function(collectionApi) {
         const blogsData = require('./src/_data/blogs.json');
-        return blogsData;
+        return blogsData.filter((b) => b.publish !== false);
     });
 
     // Add data transformation to create blog pages
     eleventyConfig.addGlobalData("blogPages", function() {
-        const blogsData = require('./src/_data/blogs.json');
+        const blogsData = require('./src/_data/blogs.json').filter((b) => b.publish !== false);
         return blogsData.map(blog => ({
             ...blog,
             layout: "blog-post.njk",
