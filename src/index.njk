@@ -191,7 +191,7 @@ metaDescription: Професионален психолог, специалис
         <h2>Блог / Статии</h2>
         <p>Полезни материали и размисли по теми, свързани с психичното здраве и личностното развитие.</p>
         <div class="blog-grid">
-            {% for blog in blogsPublished | reverse | limit(3) %}
+            {% for blog in blogsPublished | limit(3) %}
             <div class="blog-card">
                 <img src="{{ pathPrefix }}assets/images/{{ blog.image }}" alt="{{ blog.alt }}">
                 <div class="blog-card-content">

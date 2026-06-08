@@ -10,7 +10,7 @@ permalink: /blog.html
         <h2>Блог / Полезни статии</h2>
         <p>Разгледайте моите статии за психично здраве, емоционално благополучие и личностно развитие.</p>
         <div class="blog-grid">
-            {% for blog in blogsPublished | reverse %}
+            {% for blog in blogsPublished %}
             <div class="blog-card">
                 <img src="{{ pathPrefix }}assets/images/{{ blog.image }}" alt="{{ blog.alt }}">
                 <div class="blog-card-content">
